@@ -186,6 +186,7 @@ class SinglyLinkedList {
     // removing a node from a linked list
         // function accepts index
         // if index is less than 0 or greater or equal length return null
-        
+        // if index is same as length use pop method
+
 }
 
