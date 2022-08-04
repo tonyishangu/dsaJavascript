@@ -193,5 +193,9 @@ class SinglyLinkedList {
         // decrement length'
         // return value of node removed
 
+    remove = (index) => {
+        
+    }
+
 }
 
