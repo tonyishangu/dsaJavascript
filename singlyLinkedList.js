@@ -188,6 +188,7 @@ class SinglyLinkedList {
         // if index is less than 0 or greater or equal length return null
         // if index is same as length use pop method
         // if index is 0 use shift method
+        // use get  method to access index - 1
         
 
 }
