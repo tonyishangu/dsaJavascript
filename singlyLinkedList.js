@@ -233,5 +233,19 @@ class SinglyLinkedList {
         }
         return next
     }
+    print = () => {
+        let arr = []
+        let current = this.head
+        while(current){
+            arr.push(current.val)
+            current = current.next
+        }
+        console.log(arr);
+    }
 }
 
+        // BIG O
+            // insertion = 0(1)
+            // removal = depends 0(1) || 0(n)
+            // searching = 0(n)
+            // accessing = 0(n)
