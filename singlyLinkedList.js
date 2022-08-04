@@ -189,7 +189,7 @@ class SinglyLinkedList {
         // if index is same as length use pop method
         // if index is 0 use shift method
         // use get  method to access index - 1
-        
+        // set next property of that node to be the next of the next node
 
 }
 
