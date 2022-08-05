@@ -60,6 +60,16 @@ class DoublyLinkedList {
         this.length--
         return oldHead.val
     }
+    // ushift
+    // add at the start of the list
+        // function accepts a value
+        // create a new Node using the value
+        // if head is null set both head and tail to be the new node
+        // else set previous property of the head to be the new node
+            // set next property of the new node to be the head
+            // set head to be new node
+        // increment the length
+        // return the list
     unshift(val) {
         var newNode = new Node(val)
         if(this.length === 0) {
