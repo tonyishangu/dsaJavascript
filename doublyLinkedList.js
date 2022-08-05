@@ -36,6 +36,32 @@ class DoublyLinkedList {
         return this
     }
 
+    // pop
+    // removing the last node from the list
+        // if there is no head return null || undefined
+        // store current tail in a variable
+        // if length is 1 set head and tail to be null
+        // update tail to be the prevous node
+        // set new tail next to be null
+        // old tail prev to be null
+        // decrement length
+        // return value of popped node
+
+    pop = () => {
+        if(!this.head) return null
+        let deltedNode = this.tail
+        if(this.length === 1){
+            this.head = null
+            this.tail = null
+        } else {
+            this.tail = deltedNode.prev
+            this.tail.next = null
+            deltedNode.prev = null
+        }
+        this.length --
+        return deltedNode.val
+    }
+
     // shift
     // remove first node from the list
         // if length is 0 return null || underfined
