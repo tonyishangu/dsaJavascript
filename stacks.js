@@ -25,17 +25,17 @@ class Stack {
             // set next property on the node to be the old first
         // increment size
 
-    push = (val) => {
-        let newNode = new Node(val)
-        if(this.size === 0) {
-            this.first = newNode
-            this.last = newNode
-        } else {
-            let current = this.first
-            this.first = newNode
-            this.first.next = current
+        push = (val) => {
+            let newNode = new Node(val)
+            if(this.size === 0) {
+                this.first = newNode
+                this.last = newNode
+            } else {
+                let current = this.first
+                this.first = newNode
+                this.first.next = current
+            }
+            this.size ++
+            return this
         }
-        this.size ++
-        return this
-    }
 }
