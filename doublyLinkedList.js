@@ -220,3 +220,10 @@ class DoublyLinkedList {
         return found.val
     }
 }
+
+
+        // BIG 0
+            // insertion => 0(1)
+            // removal => 0(1)
+            // searching => 0(n) 0(n/2)
+            // acess => 0(n)
