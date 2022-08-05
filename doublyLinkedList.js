@@ -160,4 +160,33 @@ class DoublyLinkedList {
         }
         return false
      }
+
+    //  insert
+    // adding a node
+        // function accepts value and index
+        // if index is less than 0, or greater than the length return false
+        // if index is 0 implement unshift
+        // if index is equal to length implement push
+        // use get method to access index - 1
+        // set prev and next to link everything
+        // increment length
+        // return list
+
+    insert = (index, val) => {
+        if(index < 0 || index > this.length) return null
+        if( index === 0 ) return !!this.unshift(val)
+        if( index === this.length ) return !!this.push(val)
+
+        let newNode = new Node(val)
+        let beforeNode = this.get(index - 1)
+        let afterNode = beforeNode.prev
+
+        beforeNode.next = newNode
+        newNode.prev = beforeNode
+        newNode.next = afterNode
+        afterNode.prev = newNode
+
+        this.length ++
+        return this
+    }
 }
