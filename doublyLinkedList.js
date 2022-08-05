@@ -14,7 +14,12 @@ class DoublyLinkedList {
     }
     // push
     // adding a node at the end
-        // 
+        // function that accepts a value 
+        // create a new node 
+        // if head property is null set head and tail to be the new node
+        // else set next property of tail to be new node
+            // set prev property of the newnode to be the tail
+            // set tail to new node  
     push(val) {
         var newNode = new Node(val)
         if(!this.head){
