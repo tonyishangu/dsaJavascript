@@ -38,4 +38,31 @@ class Stack {
             this.size ++
             return this
         }
+
+        // pop
+        // removing at the end
+            // if the is no node return null
+            // if there is only one node set first and tail to be null
+            // else set first property to be next one on the current
+            // decrement size
+            // return value remove
+
+        pop = () => {
+            if(this.size === 0) return null
+            if(this.size === 1) {
+                this.first = null
+                this.last = null
+            } else {
+                let current = this.first
+                this.first = current.next
+            }
+            this.size --
+            return current.val
+        }
 }
+
+        // BIG 0
+            // insertion => 0(1)
+            // removal => 0(1)
+            // searching => 0(n)
+            // access => 0(n)
