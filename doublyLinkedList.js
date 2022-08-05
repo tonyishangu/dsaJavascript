@@ -109,4 +109,39 @@ class DoublyLinkedList {
         this.length++
         return this
     }
+
+    // get
+    // accessing a node
+        // function accepts an index
+        // if index is less than 0, greater or equal to length return null
+        // if index is less than or equal to half the length of the list
+        // create a count variable
+        // current variable to hold the head
+            // loop through the list starting from the headtowards the middle
+            // return once found
+        // if index is greater than half of the lis
+            // loop through starting from tails towards the middle
+            // return once found
+
+    get = (index) => {
+        if(index < 0 || index >= this.length) return null
+        if(index <= this.length / 2){
+            let count = 0
+            let current = this.head
+            
+            while i(count !== index){
+                current = current.next
+                count ++
+            }
+        } else {
+            count = this.length - 1
+            current = this.tail
+
+            while(count !== index){
+                current = current.prev
+                count --
+            }
+        }
+        return current
+    }
 }
