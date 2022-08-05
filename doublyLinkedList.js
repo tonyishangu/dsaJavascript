@@ -129,7 +129,7 @@ class DoublyLinkedList {
             let count = 0
             let current = this.head
             
-            while i(count !== index){
+            while (count !== index){
                 current = current.next
                 count ++
             }
@@ -188,5 +188,35 @@ class DoublyLinkedList {
 
         this.length ++
         return this
+    }
+
+    // delete
+    // removing a node
+        // function accepts an index
+        // check if index is less than 0 or greater or equal to length
+        // if index is 0 use shift method
+        // if index is equal to length - 1 use pop method
+        // use get method to retrieve node to be removed
+        // update next and prev propertis
+        // set next and prev of removed node to be null
+        // decrement length
+        // return value  of removed node
+
+    delete = (index) => {
+        if(index < 0 || index >= this.length) return null
+        if(index === 0) return this.shift()
+        if(index === this.length - 1) return this.pop()
+
+        let found = this.get(index)
+        let beforeNode = found.prev
+        let afterNode = found.next
+
+        beforeNode.next = afterNode
+        afterNode.prev = beforeNode
+        found.prev = null
+        found.next = null
+
+        this.length --
+        return found.val
     }
 }
