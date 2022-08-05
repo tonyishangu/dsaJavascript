@@ -19,7 +19,9 @@ class DoublyLinkedList {
         // if head property is null set head and tail to be the new node
         // else set next property of tail to be new node
             // set prev property of the newnode to be the tail
-            // set tail to new node  
+            // set tail to new node 
+        // increment the length
+        // return list 
     push(val) {
         var newNode = new Node(val)
         if(!this.head){
@@ -33,6 +35,17 @@ class DoublyLinkedList {
         this.length++
         return this
     }
+
+    // shift
+    // remove first node from the list
+        // if length is 0 return null || underfined
+        // place head into a variable
+        // if length is 1 set head and tail to be null
+        // else set head to be the next of the previous head
+            // set previous property of the new head to be null
+            // set next property of the old head to be null
+        // decrement length
+        // return value of old head
     shift() {
         if(this.length === 0) return undefined
         var oldHead = this.head
@@ -45,7 +58,7 @@ class DoublyLinkedList {
             oldHead.next = null
         }
         this.length--
-        return oldHead 
+        return oldHead.val
     }
     unshift(val) {
         var newNode = new Node(val)
