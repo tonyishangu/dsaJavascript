@@ -144,4 +144,20 @@ class DoublyLinkedList {
         }
         return current
     }
+    // set
+    // replace the value of a node
+        // function accepts a value and index
+        // create a variable which is the result of get method
+        // if index is found replace the value
+        // return true
+        // else return false
+
+     get = (index, val) => {
+        let found = this.get(index)
+        if (found !== null) {
+            found.val = val
+            return true
+        }
+        return false
+     }
 }
