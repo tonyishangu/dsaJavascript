@@ -63,4 +63,41 @@ class BinaryTreeSearch {
         }
 
     }
+
+    // find
+    // searching
+        // function accepts a value
+        // Starting at the root
+        // check if there is a root, if  not, we are done searching
+        // store root in a variable
+        // store found in a boolean variable
+        // else if the value of the node is the value we are looking for 
+        // if found we are done
+        // else check if value is greater or less than
+        // if its greater
+            // check to see if there is a node to the right
+            // if there is, move to that node and repeat the process
+            // else, we are done searching
+        // if its less
+            // check to see if there is a node to the left
+            // if there is, move to that node and repeat the process
+            // else, we are done searching
+
+    find = (val) => {
+        if(!this.root) return false
+        let current = this.root
+        let found = false
+
+        while(current && !found){
+            if(val < current.val){
+                current = current.left 
+            } else if (val > current.val){
+                current = current.right
+            } else {
+                found = true
+            }
+        }
+        if(!found) return false
+        return current
+    }
 }
