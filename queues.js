@@ -58,3 +58,10 @@ class Queue {
         return dequeued.val
     }
 }
+
+
+    // Big 0 notation of queue
+        // insertion => 0(1)
+        // removal => 0(1)
+        // searching => 0(n)
+        // access => 0(n)
