@@ -35,4 +35,26 @@ class Queue {
         this.size ++
         return this
     }
+
+    // Dequeue
+    // removing from the queue
+        // if there is no first element return null
+        // store first node in a variable
+        // if there is only one node set first and last to be null
+        // else set first to be the next property of current first
+        // decrement size 
+        // return value of node dequeued
+    
+    dequeue = () => {
+        if(!this.first) return null
+        let dequeued = this.first
+        if(this.first === this.last){
+            this.first = null
+            this.last = null
+        } else {
+            this.first = dequeued.next
+        }
+        this.size --
+        return dequeued.val
+    }
 }
