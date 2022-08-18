@@ -101,3 +101,7 @@ class BinaryTreeSearch {
         return current
     }
 }
+
+    // Big O notation
+        // insertion => 0(log n)
+        // searching => 0(log n)
