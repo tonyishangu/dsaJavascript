@@ -33,3 +33,15 @@
             }
             return total
         }
+
+        // dealing with collisions
+            // collisions are inevitable
+            // two ways to deal with them: 
+                // 1. separating chaning
+                    // at each index in our array we store values using a more sophisticated data structure(array || linked list)
+                    // this allows as to store multiple key-value pairs at the same index
+                // 2. linear probing
+                    // searchthrough the array  to find the next empty slot
+                    // we store a single key-value pair at each index
+
+        
