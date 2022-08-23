@@ -44,4 +44,29 @@
                     // searchthrough the array  to find the next empty slot
                     // we store a single key-value pair at each index
 
+        // hash table set and get
+            // set
+                // accept a key and value
+                // hashes the key
+                // store key-value pair in a hash table array via separating chaning
+            // get 
+                // accepts a key
+                // hashes the key
+                // retrieves the key-value pair in the hash table
+                // if the key isn't found, returns undefined
         
+        class HashTable {
+            constructor(size = 53){
+                this.keyMap = new Array(size)
+            }
+            hash = (key) => {
+                let total = 0
+                let weirdPrime = 31
+
+                for(let i = 0; i < Math.min(key.length, 100); i++){
+                    let char = key[i]
+                    let value = char.charCodeAt(0) - 96
+                    total = (total * weirdPrime + value) % this.keyMap.length
+                }
+            }
+        }
