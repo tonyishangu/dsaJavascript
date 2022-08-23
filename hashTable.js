@@ -59,7 +59,7 @@
             constructor(size = 53){
                 this.keyMap = new Array(size)
             }
-            hash = (key) => {
+            _hash = (key) => {
                 let total = 0
                 let weirdPrime = 31
 
@@ -68,5 +68,20 @@
                     let value = char.charCodeAt(0) - 96
                     total = (total * weirdPrime + value) % this.keyMap.length
                 }
+
+                return total
+            }
+            // set implementation
+
+            get = (key, value) => {
+                let index = this._hash(key)
+                if(this.keyMap[index]){
+                    for(let i = 0; i < Math.min(this.keyMap[index].length); i ++){
+                        if(this.keyMap[index][i][0] === key){
+                            return this.keyMap[index][i][1]
+                        }
+                    }
+                }
+                return undefined
             }
         }
