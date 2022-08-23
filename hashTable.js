@@ -72,12 +72,19 @@
                 return total
             }
             // set implementation
+            set = (key, value) => {
+                let index = this._hash(key)
+                if(!this.keymap[index]){
+                    this.keyMap[index] = []
+                }
+                this.keyMap[index].push([key, value])
+            }
 
-            get = (key, value) => {
+            get = (value) => {
                 let index = this._hash(key)
                 if(this.keyMap[index]){
                     for(let i = 0; i < Math.min(this.keyMap[index].length); i ++){
-                        if(this.keyMap[index][i][0] === key){
+                        if(this.keyMap[index][i][0] === value){
                             return this.keyMap[index][i][1]
                         }
                     }
